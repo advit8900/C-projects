@@ -10,14 +10,18 @@ int main(void) {
           sizeof arr[0])); // simple logic to get the no of elements in an array
 
   int size = (sizeof arr / sizeof arr[0]);
-
-  for (int i = 0; i < size; i++) {
+  int count = 0;
+  int i = 0;
+  while (arr[i-1] != EOF) {
+    
     scanf("%d", &arr[i]);
-  }
-
-  int sum = 0;
+    count++;
+    i++;
+    }
+  
+  int sum = 1;
   int ptr = 0;
-  for (ptr = 0; ptr < size; ptr++) {
+  for (ptr = 0; ptr < count; ptr++) {
     sum += arr[ptr]; // is this messy code?
   }
   printf("The sum of all the elements is: %d\n", sum);
